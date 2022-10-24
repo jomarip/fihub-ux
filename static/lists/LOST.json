@@ -1,0 +1,62 @@
+{
+  "chainId": 43114,
+  "token": {
+    "symbol": "LOST",
+    "address": "0x449674b82f05d498e126dd6615a1057a9c088f2c",
+    "platform": "Lost Worlds",
+    "description": "The LOST token is Lost World's governance token, as well as the token distributed as rewards for users of the protocol. The ERC-20 token has a maximum supply of 50M tokens, had a private sale of 9.5% of its supply and a public sale of 4% of its supply. 35% of its supply is allocated for reward distributions."
+  },
+  "routes": {
+    "lostWorldsStaking": [
+      { "type": "stake", "platform": "Lost Worlds" }
+    ],
+    "pangolinFarming": [
+      { "type": "lp", "platform": "Pangolin" },
+      { "type": "farm", "platform": "Pangolin" }
+    ]
+  },
+  "interactions": [
+    {
+      "type": "stake",
+      "platform": "Lost Worlds",
+      "tokens": [
+        { "symbol": "LOST", "address": "0x449674b82f05d498e126dd6615a1057a9c088f2c" }
+      ],
+      "contract": "0x2cf6625e35b241f30871faac932dc5946d092631",
+      "method": "deposit"
+    },
+    {
+      "type": "lp",
+      "platform": "Pangolin",
+      "tokens": [
+        { "symbol": "AVAX", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" },
+        { "symbol": "LOST", "address": "0x449674b82f05d498e126dd6615a1057a9c088f2c" }
+      ],
+      "contract": "0xe54ca86531e17ef3616d22ca28b0d458b6c89106",
+      "method": "addLiquidityAVAX"
+    },
+    {
+      "type": "farm",
+      "platform": "Pangolin",
+      "tokens": [
+        { "symbol": "PGL", "address": "0x8461681211b49c15e20b3cfd4c63be258878b7d9" }
+      ],
+      "contract": "0x1f806f7c8ded893fd3cae279191ad7aa3798e928",
+      "method": "deposit"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Lost Worlds",
+      "token": "LOST",
+      "description": "Lost Worlds is a location-based NFT platform, enabling protocols to launch NFT collections collectible by physically moving around the world, and users to curate their portfolio while trading with others.",
+      "link": "https://lostworlds.io/"
+    },
+    {
+      "name": "Pangolin",
+      "token": "PNG",
+      "description": "Pangolin is a community-driven decentralized exchange, up and running since the beginning of the Avalanche chain. They also offer limit orders as well as staking services.",
+      "link": "https://pangolin.exchange/"
+    }
+  ]
+}

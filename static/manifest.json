@@ -1,0 +1,20 @@
+{
+  "name": "FiHub",
+  "short_name": "FiHub",
+  "theme_color": "#150b3f",
+  "background_color": "#150b3f",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
